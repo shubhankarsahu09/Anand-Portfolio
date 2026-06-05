@@ -152,4 +152,58 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.innerHTML = '<span>Submit</span>';
         }, 3000);
     });
+
+    // --- 6. Project Card Video Lightbox ---
+    const overlay     = document.getElementById('video-modal-overlay');
+    const modalPlayer = document.getElementById('modal-video-player');
+    const modalSource = document.getElementById('modal-video-source');
+    const modalTitle  = document.getElementById('video-modal-title');
+    const modalTag    = document.getElementById('video-modal-tag');
+    const closeBtn    = document.getElementById('video-modal-close');
+
+    function openModal(videoSrc, title, tag) {
+        // Pause all looping card preview videos
+        document.querySelectorAll('.project-video').forEach(v => v.pause());
+
+        modalSource.src = videoSrc;
+        modalTitle.textContent = title;
+        modalTag.textContent = tag;
+        modalPlayer.load();
+        modalPlayer.play();
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        overlay.classList.remove('active');
+        modalPlayer.pause();
+        modalPlayer.currentTime = 0;
+        modalSource.src = '';
+        document.body.style.overflow = '';
+        // Resume looping card preview videos
+        document.querySelectorAll('.project-video').forEach(v => v.play());
+    }
+
+    document.querySelectorAll('.project-card[data-video]').forEach(card => {
+        card.addEventListener('click', () => {
+            openModal(
+                card.getAttribute('data-video'),
+                card.getAttribute('data-title'),
+                card.getAttribute('data-tag')
+            );
+        });
+    });
+
+    // Close on backdrop click
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeModal();
+    });
+
+    // Close on X button
+    closeBtn.addEventListener('click', closeModal);
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal();
+    });
 });

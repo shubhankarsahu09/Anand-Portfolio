@@ -1106,3 +1106,143 @@ body {
         min-width: 300px;
     }
 }
+
+/* --- VIDEO LIGHTBOX MODAL --- */
+.video-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    animation: modalFadeIn 0.25s ease;
+}
+
+.video-modal-overlay.active {
+    display: flex;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.video-modal-tile {
+    background: #111112;
+    border: 2px solid var(--brand-green);
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 40px rgba(154, 218, 0, 0.2), 0 24px 60px rgba(0,0,0,0.6);
+    animation: modalSlideUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modalSlideUp {
+    from { transform: translateY(30px) scale(0.97); opacity: 0; }
+    to   { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.video-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(154, 218, 0, 0.2);
+    background: rgba(154, 218, 0, 0.04);
+    flex-shrink: 0;
+}
+
+.video-modal-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.video-modal-title {
+    font-family: var(--font-tight);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-white);
+    letter-spacing: -0.02em;
+}
+
+.video-modal-tag {
+    font-size: 11px;
+    font-weight: 600;
+    background: var(--brand-green);
+    color: var(--brand-teal);
+    padding: 3px 10px;
+    border-radius: 100px;
+}
+
+.video-modal-close {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-white);
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.video-modal-close:hover {
+    background: rgba(154, 218, 0, 0.15);
+    border-color: var(--brand-green);
+    color: var(--brand-green);
+    transform: rotate(90deg);
+}
+
+.video-modal-body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.video-modal-body video {
+    display: block;
+    max-width: 100%;
+    max-height: calc(90vh - 80px);
+    width: auto;
+    height: auto;
+    border-radius: 0 0 18px 18px;
+}
+
+/* Project card — show play hint on hover */
+.project-card {
+    cursor: pointer;
+}
+
+.project-img-wrapper::after {
+    content: '▶';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: rgba(255,255,255,0.0);
+    background: rgba(0,0,0,0);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    border-radius: 16px;
+}
+
+.project-card:hover .project-img-wrapper::after {
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.35);
+}
+

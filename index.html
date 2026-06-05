@@ -219,7 +219,7 @@
             <div class="projects-grid-container">
                 <div class="projects-grid">
                     <!-- Project 1 (videos/2.mp4) -->
-                    <div class="project-card">
+                    <div class="project-card" data-video="videos/2.mp4" data-title="Commercial Edit" data-tag="Promo">
                         <div class="project-img-wrapper" style="position: relative; background: #000;">
                             <video autoplay loop muted playsinline class="project-video" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease;">
                                 <source src="videos/2.mp4" type="video/mp4">
@@ -238,7 +238,7 @@
                     </div>
                     
                     <!-- Project 2 (videos/3.mp4) -->
-                    <div class="project-card">
+                    <div class="project-card" data-video="videos/3.mp4" data-title="Social Campaign" data-tag="Commercial">
                         <div class="project-img-wrapper" style="position: relative; background: #000;">
                             <video autoplay loop muted playsinline class="project-video" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease;">
                                 <source src="videos/3.mp4" type="video/mp4">
@@ -481,6 +481,28 @@
         
     </div>
     
+    <!-- Video Lightbox Modal -->
+    <div class="video-modal-overlay" id="video-modal-overlay">
+        <div class="video-modal-tile" id="video-modal-tile">
+            <div class="video-modal-header">
+                <div class="video-modal-meta">
+                    <span class="video-modal-title" id="video-modal-title"></span>
+                    <span class="video-modal-tag" id="video-modal-tag"></span>
+                </div>
+                <button class="video-modal-close" id="video-modal-close" aria-label="Close">
+                    <svg viewBox="0 0 24 24" fill="none" width="20" height="20">
+                        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="video-modal-body">
+                <video id="modal-video-player" controls playsinline>
+                    <source id="modal-video-source" src="" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="index.js"></script>
 </body>
