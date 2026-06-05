@@ -604,6 +604,7 @@ body {
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
+    pointer-events: none;
 }
 
 .project-card:hover .project-img,
@@ -1040,11 +1041,33 @@ body {
 
 /* --- RESPONSIVE MEDIA QUERIES --- */
 @media (max-width: 900px) {
+    body {
+        overflow: auto !important;
+    }
+    
+    .scroll-container {
+        height: auto !important;
+        overflow-y: visible !important;
+        scroll-snap-type: none !important;
+    }
+    
+    .section {
+        height: auto !important;
+        min-height: 100vh;
+        scroll-snap-align: none !important;
+        padding: 100px 6% 80px 6% !important;
+    }
+
+    .projects-grid-container {
+        max-height: none !important;
+        overflow-y: visible !important;
+    }
+    
     .split-section {
         flex-direction: column;
-        overflow-y: auto;
-        height: auto;
-        scroll-snap-align: none;
+        overflow-y: visible !important;
+        height: auto !important;
+        scroll-snap-align: none !important;
     }
     
     .testimonials-column {

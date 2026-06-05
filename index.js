@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     optionsList.querySelectorAll('div').forEach(option => {
         option.addEventListener('click', (e) => {
+            e.stopPropagation();
             const val = option.getAttribute('data-val');
             const text = option.textContent;
             
