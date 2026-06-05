@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Framer replica">
+    <title>Portfolio</title>
+    <meta name="description" content="Professional post-production video editing portfolio.">
+    
+    <!-- Favicons -->
+    <link href="images/favicon_light.png" rel="icon" media="(prefers-color-scheme: light)">
+    <link href="images/favicon_dark.png" rel="icon" media="(prefers-color-scheme: dark)">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Portfolio">
+    <meta property="og:description" content="Professional post-production video editing portfolio.">
+    <meta property="og:image" content="images/og_image.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,900;1,600;1,900&family=Sacramento&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Floating Navbar -->
+    <nav class="navbar" id="main-nav">
+        <div class="nav-container">
+            <!-- Brand Logo (Waveform + Portfolio) -->
+            <a href="#home" class="nav-brand" id="nav-brand-link" style="height: 32px;">
+                <svg viewBox="0 0 24 20" fill="none" class="brand-logo-svg" alt="Portfolio logo" style="margin-right: 8px; height: 26px;">
+                    <!-- Waveform icon (Green #9ADA00) -->
+                    <path d="M20.4472 6.66708H20.447L17.8713 13.7822V3.34866H16.4088H15.3384H15.3354V3.3634L12.7595 14.8915V0H11.294H10.2236H10.2236V0.000248615L7.64772 11.5444V3.34866H6.1807H5.11179H5.11033L2.53592 10.4453V6.66708H0V13.3339H1.47015H2.53592H2.54043L5.11179 6.2457V16.6673H6.57743H7.64772L10.2236 5.12354V20H11.6922H12.7595H12.7625L15.3354 8.48665V16.6673H16.8068H17.8713H17.8771L20.4472 9.56763V13.3339H22.9831V6.66708C22.1378 6.66708 21.2925 6.66708 20.4472 6.66708Z" fill="#9ADA00"/>
+                </svg>
+                <span class="brand-text" style="color: var(--brand-teal); font-family: var(--font-tight); font-weight: 900; font-size: 26px; letter-spacing: -0.03em;">Portfolio</span>
+            </a>
+            
+            <!-- Navbar links -->
+            <div class="nav-links" id="nav-links-container">
+                <a href="#home" class="nav-link active" id="link-home">Home</a>
+                <a href="#about" class="nav-link" id="link-about">About</a>
+                <a href="#service" class="nav-link" id="link-service">Services</a>
+                <a href="#projects" class="nav-link" id="link-projects">Projects</a>
+                <a href="#testimonials" class="nav-link" id="link-testimonials">Testimonials</a>
+                <a href="#contact" class="nav-link" id="link-contact">Contact</a>
+            </div>
+            
+            <!-- Let's Talk Button -->
+            <a href="#contact" class="nav-cta" id="nav-cta-btn">
+                <svg viewBox="0 0 13.334 13.335" class="cta-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 6.267 10.774 L 11.197 5.844 C 10.367 5.498 9.615 4.991 8.981 4.354 C 8.343 3.72 7.837 2.966 7.491 2.136 L 2.56 7.06" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span>Let's Talk</span>
+                <svg viewBox="0 0 12 12" class="cta-arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 5.148 8.5 L 7.648 6 M 7.648 6 L 5.148 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </nav>
+    
+    <!-- Main Full-page Scroll Container -->
+    <div class="scroll-container" id="main-scroll">
+        
+        <!-- 1. Hero Section -->
+        <section class="section hero-section" id="home">
+            <div class="ribbon-overlay">
+                <img src="images/ribbon_bg.png" alt="3D Ribbon" class="hero-bg-video">
+            </div>
+            <h1 class="hero-title">Portfolio</h1>
+            
+            <!-- Footer controls inside section to match visual layout -->
+            <div class="section-footer light">
+                <div class="explore-indicator">scroll to explore</div>
+                <div class="slide-indicator">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <a href="#contact" class="bottom-cta dark">
+                    <img src="images/talk_icon.png" alt="" class="bottom-cta-icon">
+                    <span>Let's Talk</span>
+                    <svg viewBox="0 0 12 12" class="bottom-cta-arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 5.148 8.5 L 7.648 6 M 7.648 6 L 5.148 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <div class="copyright-year">©2026</div>
+            </div>
+        </section>
+        
+        <!-- 2. About Section -->
+        <section class="section about-section" id="about">
+            <div class="about-container">
+                <p class="about-text">
+                    Hi, I'm Anand. As a video editor powered by Premiere Pro, I elevate standard cuts into high-impact cinematic storytelling. With deep post-production expertise across commercials, music videos, and digital content, my work goes beyond merely assembling clips—I engineer immersive visual experiences.
+                </p>
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <span class="stat-num" data-val="30">0</span><span class="stat-plus">+</span>
+                        <p class="stat-label">Delivered Projects</p>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num" data-val="50">0</span><span class="stat-plus">K+</span>
+                        <p class="stat-label">Views Generated</p>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num" data-val="2">0</span><span class="stat-plus">+</span>
+                        <p class="stat-label">Years Experience</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-footer light">
+                <div class="explore-indicator">scroll to explore</div>
+                <div class="slide-indicator">
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <a href="#contact" class="bottom-cta dark">
+                    <img src="images/talk_icon.png" alt="" class="bottom-cta-icon">
+                    <span>Let's Talk</span>
+                    <svg viewBox="0 0 12 12" class="bottom-cta-arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 5.148 8.5 L 7.648 6 M 7.648 6 L 5.148 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <div class="copyright-year">©2026</div>
+            </div>
+        </section>
+        
+        <!-- 3. Services Section -->
+        <section class="section services-section" id="service">
+            <!-- Services Intro/Cover Title -->
+            <div class="services-intro active" id="services-intro-view">
+                <h2 class="services-title">Cutting Stories that <span class="cursive-text">matter</span></h2>
+            </div>
+            
+            <!-- Horizontal Cards Scroll Wrapper -->
+            <div class="services-wrapper" id="services-cards-view">
+                <div class="services-cards-container">
+                    <!-- Card 1 -->
+                    <div class="service-card dark-card">
+                        <h3 class="service-card-title">Commercial &<br><span>Promo</span> Editing</h3>
+                        <div class="service-card-body">
+                            <div class="card-mockup-wrapper">
+                                <img src="images/seica.webp" alt="SEICA brand bottles mockup" class="mockup-img">
+                                <span class="tag tag-top-left">Color Grading & LUTs</span>
+                                <span class="tag tag-top-right">Sound Design & Foley</span>
+                                <span class="tag tag-bottom-left">Dynamic Transitions</span>
+                                <span class="tag tag-bottom-right">High-Retention Pacing</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="service-card lime-card">
+                        <h3 class="service-card-title">YouTube & <span>Social</span><br>Content</h3>
+                        <div class="service-card-body">
+                            <div class="card-mockup-wrapper">
+                                <img src="images/cook_co.webp" alt="Cook&Co cups mockup" class="mockup-img">
+                                <span class="tag tag-top-left">Retention-Focused Cuts</span>
+                                <span class="tag tag-top-right">Dynamic Subtitles</span>
+                                <span class="tag tag-bottom-left">Vlogs & Storytelling</span>
+                                <span class="tag tag-middle-right">Thumbnail Layouts</span>
+                                <span class="tag tag-bottom-right">Script Post-Consultations</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 4 -->
+                    <div class="service-card charcoal-card">
+                        <h3 class="service-card-title">Motion Graphics</h3>
+                        <div class="service-card-body">
+                            <div class="card-mockup-wrapper">
+                                <img src="images/nashie.webp" alt="Nashie360 DJ mockup screen" class="mockup-img">
+                                <span class="tag tag-top-left">Kinetic Typography</span>
+                                <span class="tag tag-top-right">Intro & Outro Assets</span>
+                                <span class="tag tag-bottom-left">2D/3D Logo Animation</span>
+                                <span class="tag tag-bottom-right">Green Screen Keying</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-footer">
+                <div class="explore-indicator">scroll to explore</div>
+                <div class="slide-indicator">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <a href="#contact" class="bottom-cta">
+                    <img src="images/talk_icon.png" alt="" class="bottom-cta-icon">
+                    <span>Let's Talk</span>
+                    <svg viewBox="0 0 12 12" class="bottom-cta-arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 5.148 8.5 L 7.648 6 M 7.648 6 L 5.148 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <div class="copyright-year">©2026</div>
+            </div>
+        </section>
+        
+        <!-- 4. Projects Section -->
+        <section class="section projects-section" id="projects">
+            <div class="projects-bg-text">
+                <span class="works-watermark">WORKS</span>
+                <span class="cursive-watermark">last projects</span>
+            </div>
+            <div class="projects-grid-container">
+                <div class="projects-grid">
+                    <!-- Project 1 (videos/2.mp4) -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper" style="position: relative; background: #000;">
+                            <video autoplay loop muted playsinline class="project-video" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease;">
+                                <source src="videos/2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-title-row">
+                                <h4 class="project-title">Commercial Edit</h4>
+                                <span class="project-tag">Promo</span>
+                            </div>
+                            <div class="project-details-row">
+                                <p class="project-subtitle">Cinematic product promo post-production.</p>
+                                <span class="project-loc">Cairo - Egypt</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 (videos/3.mp4) -->
+                    <div class="project-card">
+                        <div class="project-img-wrapper" style="position: relative; background: #000;">
+                            <video autoplay loop muted playsinline class="project-video" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease;">
+                                <source src="videos/3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-title-row">
+                                <h4 class="project-title">Social Campaign</h4>
+                                <span class="project-tag">Commercial</span>
+                            </div>
+                            <div class="project-details-row">
+                                <p class="project-subtitle">High-retention vertical advertising edit.</p>
+                                <span class="project-loc">Dubai - UAE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-footer">
+                <div class="explore-indicator">scroll to explore</div>
+                <div class="slide-indicator">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+                <a href="#contact" class="bottom-cta">
+                    <img src="images/talk_icon.png" alt="" class="bottom-cta-icon">
+                    <span>Let's Talk</span>
+                    <svg viewBox="0 0 12 12" class="bottom-cta-arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 5.148 8.5 L 7.648 6 M 7.648 6 L 5.148 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <div class="copyright-year">©2026</div>
+            </div>
+        </section>
+        
+        <!-- 5. Testimonials & Contact Form (Combined Split-Screen Section) -->
+        <section class="section split-section" id="testimonials">
+            <!-- Left Column: Testimonials -->
+            <div class="split-left testimonials-column">
+                <div class="testimonials-watermark">Say</div>
+                <h2 class="testimonials-title-split">Testimonials <span class="cursive-text">what people</span></h2>
+                
+                <div class="testimonials-horizontal-scroll">
+                    <div class="testimonials-horizontal-track">
+                        <!-- Slide 1 -->
+                        <div class="split-testimonial-card">
+                            <div class="stars-rating">
+                                <svg width="120" height="24" viewBox="0 0 120 24" fill="none">
+                                    <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#9ADA00"/>
+                                    <path d="M36 17.27L42.18 21L40.54 13.97L46 9.24L38.81 8.63L36 2L33.19 8.63L26 9.24L31.46 13.97L29.82 21L36 17.27Z" fill="#9ADA00"/>
+                                    <path d="M60 17.27L66.18 21L64.54 13.97L70 9.24L62.81 8.63L60 2L57.19 8.63L50 9.24L55.46 13.97L53.82 21L60 17.27Z" fill="#9ADA00"/>
+                                    <path d="M84 17.27L90.18 21L88.54 13.97L94 9.24L86.81 8.63L84 2L81.19 8.63L74 9.24L79.46 13.97L77.82 21L84 17.27Z" fill="#9ADA00"/>
+                                    <path d="M108 17.27L114.18 21L112.54 13.97L118 9.24L110.81 8.63L108 2L105.19 8.63L98 9.24L103.46 13.97L101.82 21L108 17.27Z" fill="#9ADA00"/>
+                                </svg>
+                            </div>
+                            <p class="testimonial-quote">"From storyboard guidance to the final cut, everything was edited with precision. The narrative pacing and custom sound design have noticeably boosted our viewer retention."</p>
+                            <div class="testimonial-client">
+                                <img src="images/test_summit.webp" alt="Klaudia Adasko" class="client-avatar">
+                                <div class="client-info">
+                                    <span class="client-name">Klaudia Adasko</span>
+                                    <span class="client-role">Founder of Summit Financials</span>
+                                </div>
+                                <div class="client-logo-badge">
+                                    <svg width="58" height="24" viewBox="0 0 116 48" fill="none">
+                                        <rect width="115.987" height="47.9977" rx="12" fill="white"/>
+                                        <path d="M48.7671 28.4535L48.7671 31.385L51.6312 31.385L51.6312 32.1586L48.7671 32.1586L48.7671 35.9981L47.9023 35.9981L47.9023 27.6807L52.1593 27.6807L52.1593 28.4535L48.7671 28.4535Z" fill="#00302E"/>
+                                        <path d="M53.1641 35.9268L54.0697 35.9268L54.0697 29.4414L53.1641 29.4414L53.1641 35.9268Z" fill="#00302E"/>
+                                        <path d="M61.1849 32.0948L61.1849 35.9273L60.2915 35.9273L60.2915 32.1871C60.2915 31.5199 60.1234 31.025 59.787 30.7027C59.4506 30.3804 59.0142 30.2192 58.4777 30.2192C57.8066 30.2192 57.2519 30.5057 56.8136 31.0789L56.8136 29.4414L55.908 29.4414L55.908 35.9268L56.8136 35.9268L56.8136 32.1871C56.8136 31.5199 56.9817 31.025 57.3181 30.7027C57.6545 30.3804 58.0909 30.2192 58.6274 30.2192C59.2985 30.2192 59.8532 30.5057 60.2915 31.0789L60.2915 29.4414L61.1849 29.4414L61.1849 32.0948Z" fill="#00302E"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="split-testimonial-card">
+                            <div class="stars-rating">
+                                <svg width="120" height="24" viewBox="0 0 120 24" fill="none">
+                                    <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#9ADA00"/>
+                                    <path d="M36 17.27L42.18 21L40.54 13.97L46 9.24L38.81 8.63L36 2L33.19 8.63L26 9.24L31.46 13.97L29.82 21L36 17.27Z" fill="#9ADA00"/>
+                                    <path d="M60 17.27L66.18 21L64.54 13.97L70 9.24L62.81 8.63L60 2L57.19 8.63L50 9.24L55.46 13.97L53.82 21L60 17.27Z" fill="#9ADA00"/>
+                                    <path d="M84 17.27L90.18 21L88.54 13.97L94 9.24L86.81 8.63L84 2L81.19 8.63L74 9.24L79.46 13.97L77.82 21L84 17.27Z" fill="#9ADA00"/>
+                                    <path d="M108 17.27L114.18 21L112.54 13.97L118 9.24L110.81 8.63L108 2L105.19 8.63L98 9.24L103.46 13.97L101.82 21L108 17.27Z" fill="#9ADA00"/>
+                                </svg>
+                            </div>
+                            <p class="testimonial-quote">"The color grading and motion graphics made our corporate explainer video feel incredibly premium. Revisions were fast and seamless."</p>
+                            <div class="testimonial-client">
+                                <img src="images/test_seica.webp" alt="Seif Kamel" class="client-avatar">
+                                <div class="client-info">
+                                    <span class="client-name">Seif Kamel</span>
+                                    <span class="client-role">CEO & Founder of SEICA</span>
+                                </div>
+                                <div class="client-logo-badge text-logo-badge">SEICA</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="split-testimonial-card">
+                            <div class="stars-rating">
+                                <svg width="120" height="24" viewBox="0 0 120 24" fill="none">
+                                    <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#9ADA00"/>
+                                    <path d="M36 17.27L42.18 21L40.54 13.97L46 9.24L38.81 8.63L36 2L33.19 8.63L26 9.24L31.46 13.97L29.82 21L36 17.27Z" fill="#9ADA00"/>
+                                    <path d="M60 17.27L66.18 21L64.54 13.97L70 9.24L62.81 8.63L60 2L57.19 8.63L50 9.24L55.46 13.97L53.82 21L60 17.27Z" fill="#9ADA00"/>
+                                    <path d="M84 17.27L90.18 21L88.54 13.97L94 9.24L86.81 8.63L84 2L81.19 8.63L74 9.24L79.46 13.97L77.82 21L84 17.27Z" fill="#9ADA00"/>
+                                    <path d="M108 17.27L114.18 21L112.54 13.97L118 9.24L110.81 8.63L108 2L105.19 8.63L98 9.24L103.46 13.97L101.82 21L108 17.27Z" fill="#9ADA00"/>
+                                </svg>
+                            </div>
+                            <p class="testimonial-quote">"The post-production flow was collaborative and structured. Revisions were handled efficiently and the final outputs were ready to publish."</p>
+                            <div class="testimonial-client">
+                                <img src="images/test_tabadul.webp" alt="Saker Asllan" class="client-avatar">
+                                <div class="client-info">
+                                    <span class="client-name">Saker Asllan</span>
+                                    <span class="client-role">Executive Director at Tabadul</span>
+                                </div>
+                                <div class="client-logo-badge text-logo-badge">Tabadul</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 4 -->
+                        <div class="split-testimonial-card">
+                            <div class="stars-rating">
+                                <svg width="120" height="24" viewBox="0 0 120 24" fill="none">
+                                    <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#9ADA00"/>
+                                    <path d="M36 17.27L42.18 21L40.54 13.97L46 9.24L38.81 8.63L36 2L33.19 8.63L26 9.24L31.46 13.97L29.82 21L36 17.27Z" fill="#9ADA00"/>
+                                    <path d="M60 17.27L66.18 21L64.54 13.97L70 9.24L62.81 8.63L60 2L57.19 8.63L50 9.24L55.46 13.97L53.82 21L60 17.27Z" fill="#9ADA00"/>
+                                    <path d="M84 17.27L90.18 21L88.54 13.97L94 9.24L86.81 8.63L84 2L81.19 8.63L74 9.24L79.46 13.97L77.82 21L84 17.27Z" fill="#9ADA00"/>
+                                    <path d="M108 17.27L114.18 21L112.54 13.97L118 9.24L110.81 8.63L108 2L105.19 8.63L98 9.24L103.46 13.97L101.82 21L108 17.27Z" fill="#9ADA00"/>
+                                </svg>
+                            </div>
+                            <p class="testimonial-quote">"A creative post-production editor who knows how to hook a social media audience. The dynamic transitions and subtitles kept viewers engaged."</p>
+                            <div class="testimonial-client">
+                                <img src="images/test_cook.webp" alt="Petro Andriy" class="client-avatar">
+                                <div class="client-info">
+                                    <span class="client-name">Petro Andriy</span>
+                                    <span class="client-role">CEO & Founder of Cook&co</span>
+                                </div>
+                                <div class="client-logo-badge">
+                                    <svg width="68" height="24" viewBox="0 0 138 48" fill="none">
+                                        <rect width="137.243" height="48" rx="12" fill="white"/>
+                                        <path d="M86.3103 16.7306C85.8123 18.5636 84.7948 19.0548 83.4103 19.549C81.5939 20.2306 80.3259 21.1024 80.0405 23.1422L80.0278 23.2267L82.089 23.9839V23.8325C82.089 22.6257 83.0734 21.9684 83.5782 21.9684C84.1123 21.9684 84.7492 22.2073 84.7492 23.3451C84.7492 26.0315 82.6928 27.2548 80.7821 27.2548C78.2278 27.2548 76.8909 25.382 76.8909 23.5325C76.8909 20.6257 78.4735 18.4239 80.8359 18.4239C82.1648 18.4239 82.909 18.8471 83.3907 19.3496C83.9238 18.8471 84.6648 18.4239 85.8239 18.4239C86.0734 18.4239 86.2907 18.4357 86.4959 18.4593V16.6639L86.3103 16.7306Z" fill="#00302E"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="split-section-footer">
+                    <div class="explore-indicator">scroll to explore</div>
+                    <div class="slide-indicator">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot active"></span>
+                    </div>
+                    <div class="copyright-year">©2026</div>
+                </div>
+            </div>
+            
+            <!-- Right Column: Contact Form -->
+            <div class="split-right contact-column" id="contact">
+                <div class="form-container-split" id="form">
+                    <div class="form-header-split">
+                        <h2 class="form-title-split">Let’s Make <span class="cursive-text">get in touch</span><br>it Matter</h2>
+                    </div>
+                    
+                    <form class="contact-form" id="agency-contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="input-label" for="first-name">First Name</label>
+                                <input type="text" id="first-name" name="firstName" placeholder="Enter first name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="input-label" for="last-name">Last Name</label>
+                                <input type="text" id="last-name" name="lastName" placeholder="Enter last name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="input-label" for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="input-label" for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your number">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="input-label">Service</label>
+                            <div class="custom-select" id="service-select-container">
+                                <div class="select-selected" id="selected-service-display">Select...</div>
+                                <div class="select-items select-hide" id="service-options-list">
+                                    <div data-val="promo">Commercial & Promo Editing</div>
+                                    <div data-val="social">YouTube & Social Content</div>
+                                    <div data-val="motion">Motion Graphics</div>
+                                </div>
+                                <input type="hidden" name="service" id="hidden-service-input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="input-label" for="message">Your Message</label>
+                            <textarea id="message" name="message" placeholder="Your Message" rows="3" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" id="form-submit-btn">
+                            <span>Submit</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Footer aligned inside the split-right column -->
+                <footer class="site-footer-split">
+                    <div class="footer-left-split">
+                        <span class="footer-copy">© 2026 Portfolio. All Rights Reserved.</span>
+                    </div>
+                    <div class="footer-right-split">
+                        <a href="https://www.behance.net/madsmatters" target="_blank" class="social-link" id="soc-behance">
+                            <img src="images/behance.png" alt="Behance" class="social-icon">
+                        </a>
+                        <a href="https://www.instagram.com/mads.matters" target="_blank" class="social-link" id="soc-instagram">
+                            <img src="images/instagram.png" alt="Instagram" class="social-icon">
+                        </a>
+                        <a href="https://wa.me/201036636627" target="_blank" class="social-link" id="soc-whatsapp">
+                            <img src="images/whatsapp.png" alt="WhatsApp" class="social-icon">
+                        </a>
+                        <a href="https://linkedin.com/company/madsmatters" target="_blank" class="social-link" id="soc-linkedin">
+                            <img src="images/linkedin.png" alt="LinkedIn" class="social-icon">
+                        </a>
+                    </div>
+                </footer>
+            </div>
+        </section>
+        
+    </div>
+    
+    <!-- Scripts -->
+    <script src="index.js"></script>
+</body>
+</html>
