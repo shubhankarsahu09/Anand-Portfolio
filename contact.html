@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Framer replica">
+    <title>Let's Talk - Portfolio</title>
+    <meta name="description" content="Get in touch for professional post-production video editing services.">
+    
+    <!-- Favicons -->
+    <link href="images/favicon_light.png" rel="icon" media="(prefers-color-scheme: light)">
+    <link href="images/favicon_dark.png" rel="icon" media="(prefers-color-scheme: dark)">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,900;1,600;1,900&family=Sacramento&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="contact-page-body">
+    <!-- Header/Nav -->
+    <header class="contact-page-header">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand" id="nav-brand-link" style="height: 32px;">
+                <svg viewBox="0 0 24 20" fill="none" class="brand-logo-svg" alt="Portfolio logo" style="margin-right: 8px; height: 26px;">
+                    <path d="M20.4472 6.66708H20.447L17.8713 13.7822V3.34866H16.4088H15.3384H15.3354V3.3634L12.7595 14.8915V0H11.294H10.2236H10.2236V0.000248615L7.64772 11.5444V3.34866H6.1807H5.11179H5.11033L2.53592 10.4453V6.66708H0V13.3339H1.47015H2.53592H2.54043L5.11179 6.2457V16.6673H6.57743H7.64772L10.2236 5.12354V20H11.6922H12.7595H12.7625L15.3354 8.48665V16.6673H16.8068H17.8713H17.8771L20.4472 9.56763V13.3339H22.9831V6.66708C22.1378 6.66708 21.2925 6.66708 20.4472 6.66708Z" fill="#9ADA00"/>
+                </svg>
+                <span class="brand-text" style="color: var(--brand-teal); font-family: var(--font-tight); font-weight: 900; font-size: 26px; letter-spacing: -0.03em;">Portfolio</span>
+            </a>
+            
+            <a href="index.html" class="nav-cta" id="back-home-btn">
+                <svg viewBox="0 0 12 12" class="cta-arrow" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: scaleX(-1); margin-right: 4px;">
+                    <path d="M 5.148 8.5 L 7.648 6 M 7.648 6 L 5.148 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Back to Home</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="contact-page-main">
+        <div class="contact-page-container">
+            <div class="form-container-split" id="form">
+                <div class="form-header-split">
+                    <h2 class="form-title-split">Let’s Make <span class="cursive-text">get in touch</span><br>it Matter</h2>
+                </div>
+                
+                <form class="contact-form" id="agency-contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="input-label" for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="firstName" placeholder="Enter first name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-label" for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="lastName" placeholder="Enter last name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="input-label" for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-label" for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your number">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="input-label">Service</label>
+                        <div class="custom-select" id="service-select-container">
+                            <div class="select-selected" id="selected-service-display">Select...</div>
+                            <div class="select-items select-hide" id="service-options-list">
+                                <div data-val="promo">Commercial & Promo Editing</div>
+                                <div data-val="social">YouTube & Social Content</div>
+                                <div data-val="motion">Motion Graphics</div>
+                            </div>
+                            <input type="hidden" name="service" id="hidden-service-input" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="input-label" for="message">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="3" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="form-submit-btn">
+                        <span>Submit</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="contact-page-footer">
+        <div class="footer-container">
+            <span class="footer-copy">© 2026 Portfolio. All Rights Reserved.</span>
+            <div class="footer-socials">
+                <a href="https://www.behance.net/madsmatters" target="_blank" class="social-link" id="soc-behance">
+                    <img src="images/behance.png" alt="Behance" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/mads.matters" target="_blank" class="social-link" id="soc-instagram">
+                    <img src="images/instagram.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://wa.me/201036636627" target="_blank" class="social-link" id="soc-whatsapp">
+                    <img src="images/whatsapp.png" alt="WhatsApp" class="social-icon">
+                </a>
+                <a href="https://linkedin.com/company/madsmatters" target="_blank" class="social-link" id="soc-linkedin">
+                    <img src="images/linkedin.png" alt="LinkedIn" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
