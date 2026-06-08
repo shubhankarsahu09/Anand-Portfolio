@@ -21,6 +21,7 @@ export default async function handler(req, res) {
     
     // Use the Brevo API Key from environment variables
     const apiKey = process.env.BREVO_API_KEY;
+    // Trigger redeployment check
     console.log("Request body:", req.body);
     console.log("Is BREVO_API_KEY configured:", !!apiKey);
     
