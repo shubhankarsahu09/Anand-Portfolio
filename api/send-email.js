@@ -21,6 +21,13 @@ export default async function handler(req, res) {
     
     // Use the Brevo API Key from environment variables
     const apiKey = process.env.BREVO_API_KEY;
+    console.log("Request body:", req.body);
+    console.log("Is BREVO_API_KEY configured:", !!apiKey);
+    
+    if (!apiKey) {
+        return res.status(500).json({ error: "Server configuration error: BREVO_API_KEY is missing." });
+    }
+    
     const endpoint = 'https://api.brevo.com/v3/smtp/email';
 
     try {
