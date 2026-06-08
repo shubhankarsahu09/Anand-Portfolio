@@ -219,6 +219,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- 6. Project Card Video Lightbox ---
+    const overlay = document.getElementById('video-modal-overlay');
+    const modalPlayer = document.getElementById('modal-video-player');
+    const modalSource = document.getElementById('modal-video-source');
+    const closeBtn = document.getElementById('video-modal-close');
+    const modalTitle = document.getElementById('video-modal-title');
+    const modalTag = document.getElementById('video-modal-tag');
+
     if (overlay && modalPlayer && modalSource && closeBtn) {
         function openModal(videoSrc, title, tag) {
             // Pause all looping card preview videos
