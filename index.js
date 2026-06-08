@@ -145,24 +145,76 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { passive: false });
     }
     
-    // --- 5. Contact Form submission demonstration ---
+    // --- 5. Contact Form submission via Brevo Transactional Email API ---
     const contactForm = document.getElementById('agency-contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
+            
             const submitBtn = document.getElementById('form-submit-btn');
+            const originalBtnHtml = submitBtn.innerHTML;
+            
+            // Put button into sending state
+            submitBtn.disabled = true;
             submitBtn.style.background = 'var(--brand-teal)';
             submitBtn.style.color = '#ffffff';
-            submitBtn.innerHTML = '<span>Message Sent!</span>';
+            submitBtn.innerHTML = '<span>Sending...</span>';
             
-            setTimeout(() => {
-                contactForm.reset();
-                if (selectedDisplay) selectedDisplay.textContent = 'Select...';
-                if (hiddenInput) hiddenInput.value = '';
-                submitBtn.style.background = 'var(--brand-green)';
-                submitBtn.style.color = 'var(--brand-teal)';
-                submitBtn.innerHTML = '<span>Submit</span>';
-            }, 3000);
+            // Gather input values
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value || 'Not provided';
+            const service = hiddenInput ? hiddenInput.value : 'Not specified';
+            const message = document.getElementById('message').value;
+            
+            const fullName = `${firstName} ${lastName}`;
+            
+            // Local Serverless API Proxy Route
+            const endpoint = '/api/send-email';
+            
+            const emailPayload = {
+                fullName,
+                email,
+                phone,
+                service,
+                message
+            };
+            
+            fetch(endpoint, {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(emailPayload)
+            })
+            .then(response => {
+                if (response.ok) {
+                    submitBtn.style.background = '#9ada00';
+                    submitBtn.style.color = '#00302e';
+                    submitBtn.innerHTML = '<span>Message Sent!</span>';
+                    
+                    contactForm.reset();
+                    if (selectedDisplay) selectedDisplay.textContent = 'Select...';
+                    if (hiddenInput) hiddenInput.value = '';
+                } else {
+                    throw new Error('Failed to send email response status: ' + response.status);
+                }
+            })
+            .catch(error => {
+                console.error('Error sending email:', error);
+                submitBtn.style.background = '#ff4d4f';
+                submitBtn.style.color = '#ffffff';
+                submitBtn.innerHTML = '<span>Error! Try Again</span>';
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '';
+                    submitBtn.style.color = '';
+                    submitBtn.innerHTML = originalBtnHtml;
+                }, 4000);
+            });
         });
     }
 
